@@ -23,13 +23,13 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env. QMYD_qmydTOKEN
+        if: env. QMYD_qmydTOKEN: ${{ secrets. QMYD_qmydTOKEN }}
         run: |
           cd ~/AutoSyncScript
           git checkout main
           npm install
       - name: '运行 【全民悦动】'
-        if: env. QMYD_qmydTOKEN
+        if: env. QMYD_qmydTOKEN: ${{ secrets. QMYD_qmydTOKEN }}
         run: |
           cd ~/AutoSyncScript
           node Task/qmyd.js
