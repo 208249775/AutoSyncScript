@@ -1,4 +1,3 @@
-
 name: 微博每日签到打卡
 
 on:
@@ -16,7 +15,8 @@ jobs:
         WB_COOKIE: ${{ secrets.WB_COOKIE }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run: |
+          git clone https://github.com/208249775/AutoSyncScript.git ~/AutoSyncScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -24,11 +24,14 @@ jobs:
       - name: npm install
         if: env.WB_TOKEN
         run: |
+          cd ~/AutoSyncScript
+          git checkout AutoSyncScript
           npm install
       - name: '运行 【新浪微博】'
         if: env.WB_TOKEN
         run: |
-          node Sunert/Task/weibo.js'
+          cd ~/AutoSyncScript
+          node Task/weibo.js'
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY}}
           BARK_PUSH: ${{ secrets.BARK_PUSH}}
