@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        BBB_bububaoCOOKIE: ${{ secrets.BBB_bububaoCOOKIE }}
+        BBB_bububaoTOKEN: ${{ secrets.BBB_bububaoTOKEN }}
         XL_HEADER: ${{ secrets.XL_HEADER }}		
         
     steps:
@@ -55,13 +55,13 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.BBB_bububaoCOOKIE
+        if: env.BBB_bububaoTOKEN
         run: |
           cd ~/AutoSyncScript
           git checkout ZIYE
           npm install
       - name: '运行 【步步宝】'
-        if: env.BBB_bububaoCOOKIE
+        if: env.BBB_bububaoTOKEN
         run: |
           cd ~/AutoSyncScript
           node Task/bububao.js
