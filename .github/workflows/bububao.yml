@@ -58,7 +58,7 @@ jobs:
         if: env.BBB_bububaoCOOKIE
         run: |
           cd ~/AutoSyncScript
-          git checkout ZIYE
+          git checkout main
           npm install
       - name: '运行 【步步宝】'
         if: env.BBB_bububaoCOOKIE
