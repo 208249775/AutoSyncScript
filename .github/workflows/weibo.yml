@@ -1,9 +1,41 @@
+# ziye
+# github地址  https://github.com/6Svip120apk69
+# TG频道地址  https://t.me/ziyescript
+# TG交流群    https://t.me/joinchat/AAAAAE7XHm-q1-7Np-tF3g
+# boxjs链接   https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/ziye.boxjs.json
+
+
+
+# ⚠️⚠️⚠️特别重要,务必进行替换操作，不得使用原作者地址
+
+# 具体方法请看: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+
+
+#  以账号    aaa
+#  仓库地址  https://github.com/aaa/bbb 
+#  文件地址   https://raw.githubusercontent.com/aaa/bbb/ZIYE/Task/xiaole.js    为例 
+
+
+# 主要替换的字符👇
+
+# 小乐     //js名字
+# 0 0-15   //定时，如北京时间8到23点，设置0-15
+# XL_URL   //环境变量之一，47行处自行添加其他
+# aaa      //账号名
+# bbb      //仓库名
+# ZIYE     //分支名
+# Task/xiaole.js  //子文件地址
+
+
+
+
 name: 微博每日签到打卡
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '5 18 * * *'
+     - cron: '0 0-15 * * *'
   watch:
     types: started
 jobs:
@@ -12,9 +44,12 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         WB_TOKEN: ${{ secrets.WB_TOKEN }}
+        XL_HEADER: ${{ secrets.XL_HEADER }}		
+        
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        run: |
+          git clone https://github.com/208249775/AutoSyncScript.git ~/AutoSyncScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -22,24 +57,20 @@ jobs:
       - name: npm install
         if: env.WB_TOKEN
         run: |
+          cd ~/AutoSyncScript
+          git checkout Sunert
           npm install
-      - name: '运行 【新浪微博】'
+      - name: '运行 【新浪微博 】'
         if: env.WB_TOKEN
         run: |
+          cd ~/AutoSyncScript
           node Task/weibo.js
         env:
-          PUSH_KEY: ${{ secrets.PUSH_KEY}}
-          BARK_PUSH: ${{ secrets.BARK_PUSH}}
-          BARK_SOUND: ${{ secrets.BARK_SOUND}}
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN}}
-          TG_USER_ID: ${{ secrets.TG_USER_ID}}
-          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN}}
-          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET}}
-          QYWX_KEY: ${{ secrets.QYWX_KEY}}
-          IGOT_PUSH_KEY: ${{ secrets.IGOT_PUSH_KEY}}
-          QQ_SKEY: ${{ secrets.QQ_SKEY}}
-          QQ_MODE: ${{ secrets.QQ_MODE}}
-          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN}}
-          PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER}}
-          TG_PROXY_HOST: ${{ secrets.TG_PROXY_HOST}}
-          TG_PROXY_PORT: ${{ secrets.TG_PROXY_PORT}}
+          
+          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          BARK_PUSH: ${{ secrets.BARK_PUSH }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          BARK_SOUND: ${{ secrets.BARK_SOUND }}
+          DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
+          DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
