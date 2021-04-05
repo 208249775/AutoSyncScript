@@ -58,7 +58,7 @@ jobs:
         if: env.QMYD_qmydTOKEN
         run: |
           cd ~/AutoSyncScript
-          git checkout main
+          git checkout ZIYE
           npm install
       - name: '运行 【全民悦动】'
         if: env.QMYD_qmydTOKEN
