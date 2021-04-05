@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        QMYD_QMYDTOKEN: ${{ secrets. QMYD_QMYDTOKEN }}		
+        QMYD_qmydTOKEN: ${{ secrets. QMYD_QMYDTOKEN }}		
         
     steps:
       - name: Checkout
