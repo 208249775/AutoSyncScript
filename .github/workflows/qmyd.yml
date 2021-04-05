@@ -12,7 +12,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         QMYD_qmydTOKEN: ${{ secrets.QMYD_QMYDTOKEN }}		
-        QMYD_CASH: ${{ secrets.QMYD_CASH }}
     steps:
       - name: Checkout
         run: |
@@ -33,8 +32,6 @@ jobs:
           cd ~/AutoSyncScript
           node Task/qmyd.js
         env:
-          QMYD_qmydTOKEN: ${{ secrets.QMYD_qmydTOKEN }}
-          QMYD_CASH: ${{ secrets.QMYD_CASH }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
