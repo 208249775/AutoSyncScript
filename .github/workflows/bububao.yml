@@ -44,7 +44,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         BBB_bububaoTOKEN: ${{ secrets.BBB_bububaoTOKEN }}
-        XL_HEADER: ${{ secrets.XL_HEADER }}		
         
     steps:
       - name: Checkout
