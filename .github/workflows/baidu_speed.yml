@@ -58,7 +58,7 @@ jobs:
         if: env.BAIDU_TASK
         run: |
           cd ~/AutoSyncScript
-          git checkout Sunert
+          git checkout main
           npm install
       - name: '运行 【百度极速版】'
         if: env.BAIDU_TASK
