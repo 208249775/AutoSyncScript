@@ -59,7 +59,7 @@ jobs:
         if: env.YOUTH_HEADER
         run: |
           cd ~/AutoSyncScript
-          git checkout main
+          git checkout Sunert
           npm install
       - name: '运行 【中青看点 】'
         if: env.YOUTH_HEADER
