@@ -46,7 +46,7 @@ jobs:
         YOUTH_HEADER: ${{ secrets.YOUTH_HEADER }}
         YOUTH_ARTBODY: ${{ secrets.YOUTH_ARTBODY }}
         YOUTH_TIME: ${{ secrets.YOUTH_TIME }}			
-        YOUTH_NOTIFY_CONTROL: ${{ YOUTH_NOTIFY_CONTROL }}
+        
     steps:
       - name: Checkout
         run: |
