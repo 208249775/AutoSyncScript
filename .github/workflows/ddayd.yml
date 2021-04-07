@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        DDAYD_ddaydCKDDAYD_ddaydCK: ${{ secrets.DDAYD_ddaydCK }}	
+        DDAYD_ddaydCK: ${{ secrets.DDAYD_ddaydCK }}	
         
     steps:
       - name: Checkout
