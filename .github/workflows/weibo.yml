@@ -54,7 +54,7 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.WB_COOKIE
+        if: env.WB_TOKEN
         run: |
           cd ~/AutoSyncScript
           npm install
