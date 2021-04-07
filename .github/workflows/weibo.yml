@@ -64,7 +64,7 @@ jobs:
         if: env.WB_TOKEN
         run: |
           cd ~/AutoSyncScript
-          node weibo.js
+          node Task/weibo.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
