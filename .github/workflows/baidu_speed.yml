@@ -44,11 +44,12 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         BAIDU_TASK: ${{ secrets.BAIDU_TASK }}
+        XL_HEADER: ${{ secrets.XL_HEADER }}		
         
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/208249775/AutoSyncScript.git ~/AutoSyncScript
+          git clone https://github.com///AutoSyncScript.git ~/AutoSyncScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -57,7 +58,7 @@ jobs:
         if: env.BAIDU_TASK
         run: |
           cd ~/AutoSyncScript
-          git checkout main
+          git checkout Sunert
           npm install
       - name: '运行 【百度极速版】'
         if: env.BAIDU_TASK
