@@ -45,7 +45,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         WB_TOKEN: ${{ secrets.WB_TOKEN }}
-        XL_HEADER: ${{ secrets.XL_HEADER }}		
+	
         
     steps:
       - name: Checkout
