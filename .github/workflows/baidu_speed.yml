@@ -35,7 +35,7 @@ name: 百度极速版
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 0-15 * * *'
+     - cron: '0 0 * * *'
   watch:
     types: started
 jobs:
@@ -43,8 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        BAIDU_TASK: ${{ secrets.BAIDU_TASK }}	
-        
+       BAIDU_TASK: ${{ secrets.BAIDU_TASK }}		
     steps:
       - name: Checkout
         run: |
