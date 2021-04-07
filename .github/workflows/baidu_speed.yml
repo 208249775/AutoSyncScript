@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-       BAIDU_TASK: ${{ secrets.BAIDU_TASK }}		
+       BAIDU_COOKIE: ${{ secrets.BAIDU_COOKIE }}		
     steps:
       - name: Checkout
         run: |
@@ -53,13 +53,13 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.BAIDU_TASK
+        if: env.BAIDU_COOKIE
         run: |
           cd ~/AutoSyncScript
           git checkout Sunert
           npm install
       - name: '运行 【百度极速版】'
-        if: env.BAIDU_TASK
+        if: env.BAIDU_COOKIE
         run: |
           cd ~/AutoSyncScript
           node Task/baidu_speed.js
