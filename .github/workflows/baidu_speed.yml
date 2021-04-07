@@ -49,7 +49,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com///AutoSyncScript.git ~/AutoSyncScript
+          git clone https://github.com/208249775/AutoSyncScript.git ~/AutoSyncScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
