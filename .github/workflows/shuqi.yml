@@ -43,7 +43,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        shuqiuserurl: ${{ secrets.shuqiuserurl }}
       
         
     steps:
@@ -55,13 +54,13 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.shuqiuserurl
+        if: env.
         run: |
           cd ~/AutoSyncScript
           git checkout ZIYE
           npm install
       - name: '运行 【书旗小说】'
-        if: env.shuqiuserurl
+        if: env.
         run: |
           cd ~/AutoSyncScript
           node Task/xiaole.js
