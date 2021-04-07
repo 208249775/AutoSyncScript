@@ -47,11 +47,11 @@ jobs:
         JDTQ_JDTQ_jdtqcoinBODY: ${{ secrets.JDTQ_jdtqcoinBODY }}
         JDTQ_JDTQ_jdtqqpBODY: ${{ secrets.JDTQ_jdtqqpBODY }}
         JDTQ_JDTQ_jdtqqp1BODY: ${{ secrets.JDTQ_jdtqqp1BODY }}
-        JDTQ_JDTQ_jdtqqp1fbBODY: ${{ secrets.JDTQ_jdtquserBODY }}
-        JDTQ_JDTQ_jdtqqp2BODY: ${{ secrets.JDTQ_jdtquserBODY }}
-        JDTQ_JDTQ_jdtqqp2fbBODY: ${{ secrets.JDTQ_jdtquserBODY }}
-        JDTQ_JDTQ_jdtqqp3BODY: ${{ secrets.JDTQ_jdtquserBODY }}
-        JDTQ_JDTQ_jdtqqp3fbBODY: ${{ secrets.JDTQ_jdtquserBODY }}
+        JDTQ_JDTQ_jdtqqp1fbBODY: ${{ secrets.JDTQ_JDTQ_jdtqqp1fbBODY }}
+        JDTQ_JDTQ_jdtqqp2BODY: ${{ secrets.JDTQ_JDTQ_jdtqqp2BODY }}
+        JDTQ_JDTQ_jdtqqp2fbBODY: ${{ secrets.JDTQ_JDTQ_jdtqqp2fbBODY }}
+        JDTQ_JDTQ_jdtqqp3BODY: ${{ secrets.JDTQ_JDTQ_jdtqqp3BODY }}
+        JDTQ_JDTQ_jdtqqp3fbBODY: ${{ secrets.JDTQ_JDTQ_jdtqqp3fbBODY }}
     steps:
       - name: Checkout
         run: |
@@ -61,16 +61,16 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.QMYD_qmydTOKEN
+        if: env.JDTQ_jdtquserBODY
         run: |
           cd ~/AutoSyncScript
           git checkout ZIYE
           npm install
       - name: '运行 【简单天气】'
-        if: env.QMYD_qmydTOKEN
+        if: env.JDTQ_jdtquserBODY
         run: |
           cd ~/AutoSyncScript
-          node Task/qmyd.js
+          node Task/jdtq.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
