@@ -43,8 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        BAIDU_TASK: ${{ secrets.BAIDU_TASK }}
-        XL_HEADER: ${{ secrets.XL_HEADER }}		
+        BAIDU_TASK: ${{ secrets.BAIDU_TASK }}	
         
     steps:
       - name: Checkout
