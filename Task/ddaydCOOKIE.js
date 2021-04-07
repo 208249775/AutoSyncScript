@@ -12,7 +12,7 @@ boxjs链接  https://cdn.jsdelivr.net/gh/ziye888/JavaScript@main/Task/ziye.boxjs
 
 
 
-let cookie = {gPvfoQTH}
+let cookie = {}
 
 
 
