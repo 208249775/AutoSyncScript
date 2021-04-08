@@ -3,7 +3,7 @@ name: 多多爱运动
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 */4 * * *'
+     - cron: '25 * * * *'
   watch:
     types: started
 jobs:
