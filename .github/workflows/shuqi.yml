@@ -54,13 +54,13 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.
+        if: env.SQ_shuqiuserURL
         run: |
           cd ~/AutoSyncScript
           git checkout ZIYE
           npm install
       - name: '运行 【书旗小说】'
-        if: env.
+        if: env.SQ_shuqiuserURL
         run: |
           cd ~/AutoSyncScript
           node Task/xiaole.js
