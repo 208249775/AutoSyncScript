@@ -89,7 +89,7 @@ jobs:
         if: env.SQ_shuqiuserURL
         run: |
           cd ~/AutoSyncScript
-          node Task/sqxs.js
+          node Task/shuqi.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
