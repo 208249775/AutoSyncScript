@@ -53,6 +53,8 @@ jobs:
         JDTQ_jdtqqp3BODY: ${{ secrets.JDTQ_jdtqqp3BODY }}
         JDTQ_jdtqqp3fbBODY: ${{ secrets.JDTQ_jdtqqp3fbBODY }}
         JDTQ_jdtqqp4BODY: ${{ secrets.JDTQ_jdtqqp4BODY }}
+        JDTQ_jdtqcjyBODY: ${{ secrets.JDTQ_jdtqcjyBODY }}
+        
     steps:
       - name: Checkout
         run: |
