@@ -44,14 +44,14 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         JDTQ_jdtquserBODY: ${{ secrets.JDTQ_jdtquserBODY }}	
-        JDTQ_JDTQ_jdtqcoinBODY: ${{ secrets.JDTQ_jdtqcoinBODY }}
-        JDTQ_JDTQ_jdtqqpBODY: ${{ secrets.JDTQ_jdtqqpBODY }}
-        JDTQ_JDTQ_jdtqqp1BODY: ${{ secrets.JDTQ_jdtqqp1BODY }}
-        JDTQ_JDTQ_jdtqqp1fbBODY: ${{ secrets.JDTQ_JDTQ_jdtqqp1fbBODY }}
-        JDTQ_JDTQ_jdtqqp2BODY: ${{ secrets.JDTQ_JDTQ_jdtqqp2BODY }}
-        JDTQ_JDTQ_jdtqqp2fbBODY: ${{ secrets.JDTQ_JDTQ_jdtqqp2fbBODY }}
-        JDTQ_JDTQ_jdtqqp3BODY: ${{ secrets.JDTQ_JDTQ_jdtqqp3BODY }}
-        JDTQ_JDTQ_jdtqqp3fbBODY: ${{ secrets.JDTQ_JDTQ_jdtqqp3fbBODY }}
+        JDTQ_jdtqcoinBODY: ${{ secrets.JDTQ_jdtqcoinBODY }}
+        JDTQ_jdtqqpBODY: ${{ secrets.JDTQ_jdtqqpBODY }}
+        JDTQ_jdtqqp1BODY: ${{ secrets.JDTQ_jdtqqp1BODY }}
+        JDTQ_jdtqqp1fbBODY: ${{ secrets.JDTQ_jdtqqp1fbBODY }}
+        JDTQ_jdtqqp2BODY: ${{ secrets.JDTQ_jdtqqp2BODY }}
+        JDTQ_jdtqqp2fbBODY: ${{ secrets.JDTQ_jdtqqp2fbBODY }}
+        JDTQ_jdtqqp3BODY: ${{ secrets.JDTQ_jdtqqp3BODY }}
+        JDTQ_jdtqqp3fbBODY: ${{ secrets.JDTQ_jdtqqp3fbBODY }}
     steps:
       - name: Checkout
         run: |
