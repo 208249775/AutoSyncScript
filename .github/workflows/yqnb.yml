@@ -44,7 +44,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         YQNB_yqnbHEADER: ${{ secrets.YQNB_yqnbHEADER }}
-        YQNB_yqnbBODY: ${{ secrets.YQNB_yqnbBODY }}
         
     steps:
       - name: Checkout
