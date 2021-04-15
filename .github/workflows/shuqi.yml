@@ -44,6 +44,32 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
         SQ_shuqiuserURL: ${{ secrets.SQ_shuqiuserURL }}
+        SQ_shuqisyURL: ${{ secrets.SQ_shuqisyURL }}
+        SQ_shuqisyBODY: ${{ secrets.SQ_shuqisyBODY }}
+        SQ_shuqispBODY: ${{ secrets.SQ_shuqispBODY }}
+        SQ_shuqiscBODY: ${{ secrets.Q_shuqiscBODY }}
+        SQ_shuqiydBODY: ${{ secrets.SQ_shuqiydBODY }}
+        SQ_shuqiqdBODY: ${{ secrets.SQ_shuqiqdBODY }}
+        SQ_shuqirwBODY: ${{ secrets.SQ_shuqirwBODY }}
+        SQ_shuqifxBODY: ${{ secrets.SQ_shuqifxBODY }}
+        SQ_shuqisprwURL: ${{ secrets.SQ_shuqisprwURL }}
+        SQ_shuqijlBODY: ${{ secrets.SQ_shuqijlBODY }}
+        SQ_shuqisqjlBODY: ${{ secrets.SQ_shuqisqjlBODY }}
+        SQ_shuqicjyURL: ${{ secrets.SQ_shuqicjyURL }}
+        SQ_shuqicjcsBODY: ${{ secrets.SQ_shuqicjcsBODY }}
+        SQ_shuqicjBODY: ${{ secrets.SQ_shuqicjBODY }}
+        SQ_shuqijsspBODY: ${{ secrets.SQ_shuqijsspBODY }}
+        SQ_shuqijsydURL: ${{ secrets.SQ_shuqijsydURL }}
+        SQ_shuqijsydBODY: ${{ secrets.SQ_shuqijsydBODY }}
+        SQ_shuqijsqdBODY: ${{ secrets.SQ_shuqijsqdBODY }}
+        SQ_shuqijsqdspyURL: ${{ secrets.SQ_shuqijsqdspyURL }}
+        SQ_shuqijsqdspBODY: ${{ SQ_shuqijsqdspBODY }}
+        SQ_shuqijsrwBODY: ${{ secrets.SQ_shuqijsrwBODY }}
+        SQ_shuqijsfxBODY: ${{ secrets.SQ_shuqijsfxBODY }}
+        SQ_shuqijsbookURL: ${{ secrets.SQ_shuqijsbookURL }}
+        SQ_shuqijsbookBODY: ${{ secrets.SQ_shuqijsbookBODY }}
+        SQ_shuqijssprwURL: ${{ secrets.SQ_shuqijssprwURL }}
+        
         
     steps:
       - name: Checkout
