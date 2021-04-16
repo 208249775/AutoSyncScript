@@ -58,7 +58,7 @@ jobs:
         if: env.YQNB_yqnbHEADER
         run: |
           cd ~/AutoSyncScript
-          git checkout ZIYE
+          git checkout maim
           npm install
       - name: '运行 【易趣牛帮】'
         if: env.YQNB_yqnbHEADER
