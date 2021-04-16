@@ -77,7 +77,6 @@ jobs:
         JDTQ_jdtqcf3BODY: ${{ secrets.JDTQ_jdtqcf3BODY }}
         JDTQ_jdtqcf3fbBODY: ${{ secrets.JDTQ_jdtqcf3fbBODY }}
         JDTQ_jdtqcf4BODY: ${{ secrets.JDTQ_jdtqcf4BODY }}
-        JDTQ_jdtqcf4BODY: ${{ secrets.JDTQ_jdtqcf4BODY }}
         JDTQ_jdtqcf4fbBODY: ${{ secrets.JDTQ_jdtqcf4fbBODY }}
         JDTQ_jdtqcf5BODY: ${{ secrets.JDTQ_jdtqcf5BODY }}
         JDTQ_jdtqcjyBODY: ${{ secrets.JDTQ_jdtqcjyBODY }}
